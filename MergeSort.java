@@ -33,13 +33,23 @@ public class MergeSort {
         int left = 0; int right = 0; int index = 0;
         while (left<leftArray.length && right < rightArray.length){
             if(leftArray[left] < rightArray[right]){
-                result[index] = rightArray[right];
+                result[index] = leftArray[left];
+                index++; left++;
             }//end if
             else{
                 result[index] = rightArray[right];
                 index++; right++;
             }//end else
         }//end while
+        while(left<leftArray.length){
+            result[index] = leftArray[left];
+            left++; index++;
+        }//end while
+        while(right < rightArray.length){
+            result[index] = rightArray[right];
+            right++; index++;
+        }//end while
+        return result;
     }//end merge
 
 }//end class
