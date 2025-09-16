@@ -6,5 +6,5 @@ save:
 runMerge: MergeSort.class
 	java MergeSort
 
-MergeSort.class:
-	javac MergeSort
+MergeSort.class: MergeSort.java
+	javac MergeSort.java
